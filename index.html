@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vélo'V</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Bievenue sur le site de Vélo'V, vous trouverez l'intégralité des stations pour y déposer votre vélo mais aussi réserver en ligne et le récupérer dans les  20 prochaines minutes">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- importation de googleFonts -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <!-- importation de fontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Bandeau haut de page -->
+    <header>
+        <div id="logo1">
+            <img src="images/logo_velo_v.png" alt="Logo_Velo'V" id="logoVelo" />
+        </div>
+
+        <div id="logo2">
+            <img src="images/logo_grand_lyon.png" alt="Logo_Grand_Lyon_Métropole" id="logoVille">
+        </div>
+    </header>
+
+    <!-- Contenu de la page (entre les marge de 10%) -->
+    <section id="corpPage">
+        <!-- Explication du fonctionnement du service -->
+        <div id="slider">
+            <div id="PresentationUtilisation">
+                <div id="messageUtilisation">
+                    <p>Pour changer l'instruction d'utilisation de nos services, cliquez sur les flèches présentes à gauche et à droite du cadre <span id="messagePc">ou alors, utiliser les flèches directionnelles gauche ou droite de votre clavier</span>.</p>
+                </div>
+                <div id="contenuPresentation">
+                    <div id="blocImage">
+                        <img src="images/ImageDiaporama_01.jpg" alt="Montre les emplacement de station sur la carte" id="modificationImage">
+                    </div>
+                    <div id="habillageImage">
+                        <p id="messageHabillageImage">Pour commencer, selectionnez une station sur la carte en cliquant sur un marqueur.</p>
+                    </div>
+                    <div id="flecheGauche"><i class="fas fa-3x fa-angle-left"></i></div>
+                    <div id="flecheDroite"><i class="fas fa-3x fa-angle-right"></i></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Carte -->
+        <div id="conteneurMap">
+            <h3>carte des réservations</h3>
+            <div id="map">
+            </div>
+            <div id="infosReservation">
+                <div id="infos">
+                    <p id="close">x</p>
+                    <p class="titreInfos">adresse:</p>
+                    <p id="adresseInfo"></p>
+                    <p class="titreInfos">Nombre de place total:</p>
+                    <p id="placeTotal"></p>
+                    <p class="titreInfos">Nombre de place dispo:</p>
+                    <p id="placeDispo"></p>
+                    <p class="titreInfos">nombre de vélo:</p>
+                    <p id="veloDispo"></p>
+                </div>
+                <p id="btn"><a href="#canvas" id="reservation">Réservation</a></p>
+            </div>
+        </div>
+
+        <!-- Cadre de réservation -->
+        <footer id="conteneurReservation">
+            <h3>Votre réservation</h3>
+            <p id="messageReservation">Vous n'avez pas de réservation en cours.</p>
+            <p id="messageReservationValide">Votre réservation à la station "<span id="stationReservation"></span>" est valable encore <span id="minutes"></span> minute(s) et <span id="secondes"></span> seconde(s).</p>
+            <div id="blocReservation">
+                <div id="blocSignature">
+                    <p id="messageSignature">Signez dans le cadre pour valider votre réservation</p>
+                    <canvas id="canvas" width="300" height="150"></canvas>
+                    <p id="btnAccepter">
+                        <button id="accepterReservation" type="submit">Valider</button>
+                        <button id="correctionSignature" type="submit">Effacer</button>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Les scripts -->
+    <!-- Pour utiliser les API -->
+    <script src="js/ajax.js"></script>
+
+    <!-- Pour utiliser le regroupement de marqueur -->
+    <script src="js/markerclusterer.js"></script>
+
+    <!-- Pour le diaporama explicatif -->
+    <script src="js/diaporama.js"></script>
+
+    <!-- Pour ajouter le contenu sur la map(objet) -->
+    <script src="js/map.js"></script>
+
+    <!-- Gère le décompte de réservation-->
+    <script src="js/reservationChrono.js"></script>
+
+    <!-- Pour gérer le canvas quand necessaire-->
+    <script src="js/canvas.js"></script>
+
+    <!-- crée et utilise les objets lorsque necessaire -->
+    <script src="js/main.js"></script>
+
+    <!-- Pour ajouter la map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfBonih1XxgCR5lheIWdt33x-fecokvwI&callback=initMap"></script>
+</body>
+
+</html>
