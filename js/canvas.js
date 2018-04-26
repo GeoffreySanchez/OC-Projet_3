@@ -31,10 +31,3 @@ var canvasSignature = {
 
     }
 };
-
-var canvasSignatureTest = {
-    init: function (test,test01){
-        this.test = test01;
-        this.test01 = test;
-    }
-}
