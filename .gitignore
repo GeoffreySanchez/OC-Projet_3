@@ -3,3 +3,18 @@
 # Example .gitignore files: https://github.com/github/gitignore
 /bower_components/
 /node_modules/
+js/diaporama\.js
+
+js/main\.js
+
+js/map\.js
+
+js/markerclusterer\.js
+
+js/reservationChrono\.js
+
+images/
+
+css/
+
+Projet_3_Concevez une carte interactive de location de vélos\.zip
