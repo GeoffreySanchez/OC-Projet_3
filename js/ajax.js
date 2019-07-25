@@ -17,4 +17,3 @@
         req.send(null);
     }
 
-Ceci est un test foiré

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Vélo'V</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Bievenue sur le site de Vélo'V, vous trouverez l'intégralité des stations pour y déposer votre vélo mais aussi réserver en ligne et le récupérer dans les  20 prochaines minutes">
+    <meta name="description" content="Bienvenue sur le site de Vélo'V, vous trouverez l'intégralité des stations pour y déposer votre vélo, mais aussi réserver en ligne et le récupérer dans les  20 prochaines minutes">
     <link rel="stylesheet" href="css/style.css">
     <!-- importation de googleFonts -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
@@ -44,18 +44,15 @@
                     <div id="flecheDroite"><i class="fas fa-3x fa-angle-right"></i></div>
                 </div>
             </div>
-
-<p>test</p>
         </div>
 
         <!-- Carte -->
         <div id="conteneurMap">
             <h3>carte des réservations</h3>
-            <div id="map">
-            </div>
+            <div id="map"></div>
             <div id="infosReservation">
                 <div id="infos">
-                    <p id="close">x</p>
+                   <div class="rowR"><p id="close">x</p></div>
                     <p class="titreInfos">adresse:</p>
                     <p id="adresseInfo"></p>
                     <p class="titreInfos">Nombre de place total:</p>
@@ -77,7 +74,7 @@
             <div id="blocReservation">
                 <div id="blocSignature">
                     <p id="messageSignature">Signez dans le cadre pour valider votre réservation</p>
-                    <canvas id="canvas" width="300" height="150"></canvas>
+                    <canvas id="canvas" width="240" height="150"></canvas>
                     <p id="btnAccepter">
                         <button id="accepterReservation" type="submit">Valider</button>
                         <button id="correctionSignature" type="submit">Effacer</button>
@@ -110,7 +107,7 @@
     <script src="js/main.js"></script>
 
     <!-- Pour ajouter la map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfBonih1XxgCR5lheIWdt33x-fecokvwI&callback=initMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOURKEYHERE&callback=initMap"></script>
 </body>
 
 </html>
